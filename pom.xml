@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.Indyce</groupId>
-    <artifactId>sudden-death</artifactId>
-    <version>2.0</version>
+    <artifactId>SuddenDeath</artifactId>
+    <version>2.0.1</version>
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
@@ -28,6 +28,21 @@
                 </includes>
             </resource>
         </resources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>auto-clean</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 
     <repositories>
