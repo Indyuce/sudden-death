@@ -4,7 +4,7 @@ main: net.Indyuce.suddendeath.SuddenDeath
 author: Indyuce
 description: ${project.description}
 softdepend: [WorldGuard]
-api-version: 1.18
+api-version: 1.13
 commands:
     sdstatus:
         description: Shows your current status (bleeding, ...).
