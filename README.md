@@ -1,4 +1,7 @@
 # sudden-death
+Find it on spigot here\
+https://www.spigotmc.org/resources/sudden-death-40-off.38372/
+
 **Maven Integration**
 ```
 <repositories>
