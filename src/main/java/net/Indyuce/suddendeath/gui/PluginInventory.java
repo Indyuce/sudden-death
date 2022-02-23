@@ -1,5 +1,7 @@
 package net.Indyuce.suddendeath.gui;
 
+import net.Indyuce.suddendeath.SuddenDeath;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
@@ -22,6 +24,9 @@ public abstract class PluginInventory implements InventoryHolder {
     public abstract void whenClicked(InventoryClickEvent event);
 
     public void open() {
-        player.openInventory(getInventory());
+        if (Bukkit.isPrimaryThread())
+            player.openInventory(getInventory());
+        else
+            Bukkit.getScheduler().runTask(SuddenDeath.plugin, () -> player.openInventory(getInventory()));
     }
 }
